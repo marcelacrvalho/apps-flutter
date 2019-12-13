@@ -22,7 +22,7 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
   GlobalKey<FormState> _formKey = GlobalKey<FormState>();
-  TextEditingController _pesoController = new TextEditingController(); // PEGAR O QUE O USUÁRIO DIGITOU
+  TextEditingController _pesoController = new TextEditingController(); 
   TextEditingController _alturaController = new TextEditingController();
   String _informacao = '';
 
@@ -35,10 +35,10 @@ class _HomeState extends State<Home> {
   }
 
   void _calcular() {
-    double _peso = double.parse(_pesoController.text); // pegando os dados do controller e transformando em double
+    double _peso = double.parse(_pesoController.text); 
     double _altura = double.parse(_alturaController.text) / 100;
     double _imc = _peso / (_altura * _altura);
-    setState(() { // CHAMA-SE O SET STATE POIS ELA MUDARÁ O TEXTO CONFORME OS DADOS SÃO INSERIDOS
+    setState(() { 
       _imc = _peso / (_altura * _altura);
         if (_imc < 18.6) {
         _informacao = 'Abaixo do peso (${_imc.toStringAsPrecision(3)})';
@@ -58,17 +58,17 @@ class _HomeState extends State<Home> {
         backgroundColor: Colors.blueGrey,
         title: Text('Calculadora de IMC'),
         centerTitle: true,
-        actions: <Widget>[ // COLOCAR BOTÕES NA MINHA BARRA
+        actions: <Widget>[ 
           IconButton(
-            icon: Icon(Icons.refresh), // TIPO DE BOTÃO QUE QUERO
-            onPressed: _resetar, // TODA VEZ QUE APERTAR, CHAMARÁ A FUNÇÃO RESETAR
+            icon: Icon(Icons.refresh),
+            onPressed: _resetar, 
           ),
         ],
       ),
       body: SafeArea(
           child: SingleChildScrollView(
             padding: EdgeInsets.all(8.0),
-            child: Form( // PARA FAZER VALIDAÇÃO DE COISAS ESCRITAS PELO USUÁRIO
+            child: Form( 
             key: _formKey,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -76,7 +76,7 @@ class _HomeState extends State<Home> {
                   Icon(Icons.supervised_user_circle,
                       color: Colors.blueGrey, size: 100.0),
                   TextFormField(
-                    controller: _pesoController, // INFORMANDO QUEM É MEU CONTROLLER
+                    controller: _pesoController, 
                     keyboardType: TextInputType.number,
                     textAlign: TextAlign.center,
                     validator: (value){
