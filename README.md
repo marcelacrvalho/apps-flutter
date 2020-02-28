@@ -1,2 +1,2 @@
 # projetos-flutter
-Projetos simples feitos em Flutter
+Alguns aplicativos simples feitos em Flutter
