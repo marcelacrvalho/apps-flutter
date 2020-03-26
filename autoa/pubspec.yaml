@@ -1,0 +1,32 @@
+name: autoa
+description: Um aplicativo que consume uma API externa, que tem como finalidade, vender carros
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.1.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^0.1.2
+  http: ^0.12.0+4
+  page_transition: "^1.1.5"
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+
+  uses-material-design: true
+
+  assets:
+   - imagens/
+
+  fonts:
+    - family: FonteTitulo
+      fonts:
+        - asset: fontes/fonte.TTF

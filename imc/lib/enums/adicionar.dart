@@ -1,0 +1,1 @@
+enum Adicionar {maisIdade, menosIdade}
